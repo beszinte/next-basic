@@ -3,12 +3,21 @@ import axios from "axios";
 import Link from "next/link";
 import Head from "next/head";
 import { useEffect } from "react";
+// import Exemple from './../components/exemple';
+// import dynamic from "next/dynamic";
 
 /* utiliser localstorage avec la methode 2
 si notre js est chargé tu peux afficher notre composant Exemple 
 ajouter l'attribut ssr à false pour dire à nextJs que nous allons charger ces composant que cote client 
 si je le met à tur je vais avoir l'erreur que localstorage n'est pas défini */
 
+/*
+ligne de code si on utilise export default Exemple dans exemple.js
+const Exemple = dynamic( () => import ("../components/exemple"), {ssr: false} )
+sinon utilisé celle avec .then()
+*/
+
+// const Exemple = dynamic( () => import ("../components/exemple").then(mod => mod.Exemple), {ssr: false} )
 
 // je destructure pour mettre data
 const Home = ({ data }) => {
@@ -19,8 +28,8 @@ const Home = ({ data }) => {
   };
 
   /* test de notre variable d'en coté client => undefined car on a pas mis le prefixe NEXT_PUBLIC*/
-  console.log('API_ROOT coté client', process.env.API_ROOT);
-  console.log('NEXT_PUBLIC_API_ROOT coté client', process.env.NEXT_PUBLIC_API_ROOT);
+  // console.log('API_ROOT coté client', process.env.API_ROOT);
+  // console.log('NEXT_PUBLIC_API_ROOT coté client', process.env.NEXT_PUBLIC_API_ROOT);
 
   /* 1. utiliser localstorage */
   useEffect( ()=> {
@@ -35,7 +44,9 @@ const Home = ({ data }) => {
       <title>Liste des régions</title>
     </Head>
       <Layout>
-        <div className="container-fluid">          
+        <div className="container-fluid">
+          {/*afficher localStorage avec la methode 2 */}
+          {/* <Exemple /> */}       
 
           {/*afficher une image du dossier public */}
           <img src="/images/redux.jpg" />
