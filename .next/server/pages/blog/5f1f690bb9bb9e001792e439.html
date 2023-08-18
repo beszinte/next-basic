@@ -1,0 +1,33 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><title>How to Create a JavaScript Network Graph</title><meta name="next-head-count" content="3"/><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/><link rel="preload" href="/_next/static/css/6118e5451f3585d2.css" as="style"/><link rel="stylesheet" href="/_next/static/css/6118e5451f3585d2.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js"></script><script src="/_next/static/chunks/webpack-8fa1640cc84ba8fe.js" defer=""></script><script src="/_next/static/chunks/framework-7a7e500878b44665.js" defer=""></script><script src="/_next/static/chunks/main-9e04412d3480e75f.js" defer=""></script><script src="/_next/static/chunks/pages/_app-3313529033c2b732.js" defer=""></script><script src="/_next/static/chunks/814-8ca81627e4bde168.js" defer=""></script><script src="/_next/static/chunks/pages/blog/%5Bid%5D-f73b84008e5cac39.js" defer=""></script><script src="/_next/static/ujjAh6kHG6Sm29kRanXyW/_buildManifest.js" defer=""></script><script src="/_next/static/ujjAh6kHG6Sm29kRanXyW/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div><div class="header_header__zJOD0"><a href="/"><span class="header_link__ne2MS">Home</span></a><a href="/blog"><span class="header_link__ne2MS">Blog</span></a><a href="/profile"><span class="header_link__ne2MS">Profile</span></a><a href="/blog/items"><span class="header_link__ne2MS">Items</span></a><a href="/blog/categories"><span class="header_link__ne2MS">Categories</span></a><a href="/departements"><span class="header_link__ne2MS">Départements</span></a></div><h1>How to Create a JavaScript Network Graph</h1><div><img src="https://res.cloudinary.com/beloved/image/upload/v1595894027/Udemy/fm5rmfuwdls1rbjdvosd.png"/></div><p>uilding a JS Network Graph From Scratch
+Basically, to build a JS-based network graph, we need to follow the same four steps as with literally any JavaScript chart:
+Create an HTML page.
+Add the necessary scripts.
+Load the data that will be visualized.
+Draw the chart.
+1. Create an HTML page
+The first step towards building our network graph is to setup an HTML page. This involves creating a basic HTML template for the chart as well as adding the necessary CSS rules.
+Here we also add a title for our HTML page and create a div to contain the chart.
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;JavaScript Network Graph&lt;/title&gt;
+    &lt;style&gt;
+      html, body, #container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
+    &lt;script&gt;
+      // The chart code goes here.
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+I’ve set the CSS to make the container div fill the entire page. You may want to change this depending on your use case, of course.
+2. Add the necessary scripts
+The second step is to add all the necessary scripts. We will be using AnyChart JS Charts which is a very easy to use and powerful JavaScript charting library. I personally love AnyChart because it is great for both beginners and pros alike. It lets you quickly prototype data visualizations and really helps speed up the entire development process.
+To make good use of the AnyChart library, we need to add its dedicated modules. In this tutorial, we will be using three of them. The Core and Graph modules are required to draw our network graph, and the Data Adapter module will help us import the Game of Thrones JSON data (more on that shortly).</p></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"data":{"pictures":["https://res.cloudinary.com/beloved/image/upload/v1595894027/Udemy/fm5rmfuwdls1rbjdvosd.png"],"_id":"5f1f690bb9bb9e001792e439","title":"How to Create a JavaScript Network Graph","body":"Network graphs are a special, very interesting form of data visualization. Unlike more traditional chart types like bar graphs or pie charts, a network graph does a bit more than visualize numerical data.","description":"uilding a JS Network Graph From Scratch\nBasically, to build a JS-based network graph, we need to follow the same four steps as with literally any JavaScript chart:\nCreate an HTML page.\nAdd the necessary scripts.\nLoad the data that will be visualized.\nDraw the chart.\n1. Create an HTML page\nThe first step towards building our network graph is to setup an HTML page. This involves creating a basic HTML template for the chart as well as adding the necessary CSS rules.\nHere we also add a title for our HTML page and create a div to contain the chart.\n\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n  \u003chead\u003e\n    \u003ctitle\u003eJavaScript Network Graph\u003c/title\u003e\n    \u003cstyle\u003e\n      html, body, #container {\n        width: 100%;\n        height: 100%;\n        margin: 0;\n        padding: 0;\n      }\n    \u003c/style\u003e\n  \u003c/head\u003e\n  \u003cbody\u003e\n    \u003cdiv id=\"container\"\u003e\u003c/div\u003e\n    \u003cscript\u003e\n      // The chart code goes here.\n    \u003c/script\u003e\n  \u003c/body\u003e\n\u003c/html\u003e\nI’ve set the CSS to make the container div fill the entire page. You may want to change this depending on your use case, of course.\n2. Add the necessary scripts\nThe second step is to add all the necessary scripts. We will be using AnyChart JS Charts which is a very easy to use and powerful JavaScript charting library. I personally love AnyChart because it is great for both beginners and pros alike. It lets you quickly prototype data visualizations and really helps speed up the entire development process.\nTo make good use of the AnyChart library, we need to add its dedicated modules. In this tutorial, we will be using three of them. The Core and Graph modules are required to draw our network graph, and the Data Adapter module will help us import the Game of Thrones JSON data (more on that shortly).","__v":0}},"__N_SSG":true},"page":"/blog/[id]","query":{"id":"5f1f690bb9bb9e001792e439"},"buildId":"ujjAh6kHG6Sm29kRanXyW","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
