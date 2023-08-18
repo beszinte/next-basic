@@ -14,6 +14,7 @@ const Items = () => {
           <li>Culture</li>
           <li>Social</li>
           <li>Economique</li>
+          <li>Et plus encore ...</li>
         </ul>
       </Layout>
     </>
