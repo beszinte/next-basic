@@ -9,8 +9,8 @@ const Items = () => {
       </Head>
       <Layout>
         <h1>Items</h1>
+        <h1>Liste des categories</h1>
         <ul>
-          <h1>Liste des categories</h1>
           <li>Culture</li>
           <li>Social</li>
           <li>Economique</li>
